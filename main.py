@@ -11,7 +11,7 @@ def load_rfid_numbers_from_file(file_path):
     return rfid_numbers
 
 # 初期化時にテキストファイルからRFID番号を読み込む
-g_rfid_numbers_now = load_rfid_numbers_from_file('rfid_numbers.txt')
+g_rfid_numbers_now = load_rfid_numbers_from_file('RFID.txt')
 g_door_lock_status = True
 
 class GetRfidDatas:
