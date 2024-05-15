@@ -71,7 +71,3 @@ api.add_route('/unlock-door', UnlockDoor())
 api.add_route('/add-rfid-data', AddRfidData())
 api.add_route('/remove-rfid-data', RemoveRfidData())
 api.add_route('/lock-door', LockDoor())
-
-if __name__ == '__main__':
-    import bjoern
-    bjoern.run(api, '127.0.0.1', 5000)
