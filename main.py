@@ -3,7 +3,7 @@ import random
 import json
 
 def generate_rfid_number():
-    return ''.join([str(random.randint(0, 9)) for _ in range(16)])
+    return ''.join(str(random.choice('0123456789ABCDEF')) for _ in range(24))
 
 g_rfid_numbers_now = [generate_rfid_number() for _ in range(10)]
 g_door_lock_status = True
