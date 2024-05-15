@@ -84,9 +84,14 @@ class LockDoor:
 class LockStatus:
     def on_post(self, req, resp):
         global g_door_lock_status
-        msg = {
-            "result": g_door_lock_status
-        }
+        if g_door_lock_status == "true":
+            msg = {
+                "result": "lock"
+            }
+        else:
+            msg = {
+                "result": "unlock"
+            }
         resp.body = json.dumps(msg)
         resp.status = falcon.HTTP_200
 
