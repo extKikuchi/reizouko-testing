@@ -49,6 +49,7 @@ class UnlockDoor:
     def on_post(self, req, resp):
         global g_door_lock_status
         g_door_lock_status = False
+        print("LockDoor called: g_door_lock_status set to", g_door_lock_status)
         msg = {
             "result": "unlocked"
         }
@@ -59,6 +60,7 @@ class LockDoor:
     def on_post(self, req, resp):
         global g_door_lock_status
         g_door_lock_status = True
+        print("LockDoor called: g_door_lock_status set to", g_door_lock_status)
         msg = {
             "result": "locked"
         }
