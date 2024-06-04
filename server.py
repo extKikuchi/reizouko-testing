@@ -6,7 +6,7 @@ ANDROID_API_URL = 'http://192.168.1.105:8080'
 
 class GetRfidData:
     def on_post(self, req, resp):
-        response = requests.post(f'{ANDROID_API_URL}/get-rfid-datas')
+        response = requests.post(f'{ANDROID_API_URL}/get-rfid-data')
         print(response)
         rfid_data = response.json()
         resp.body = json.dumps(rfid_data)
@@ -31,7 +31,7 @@ class LockDoor:
 
 class GetLockStatus:
     def on_post(self, req, resp):
-        response = requests.post(f'{ANDROID_API_URL}/get-lock-status')
+        response = requests.post(f'{ANDROID_API_URL}/is-door-locked')
         print(response)
         result = response.json()
         resp.body = json.dumps(result)
