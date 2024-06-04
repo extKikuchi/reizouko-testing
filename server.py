@@ -11,7 +11,7 @@ class GetRfidData:
         response = requests.get(f'{ANDROID_API_URL}/get-rfid-data')
         print(response)
         rfid_data = response.json()
-        print("RFID DATA > " + rfid_data)
+        #print("RFID DATA > " + rfid_data)
         resp.body = json.dumps(rfid_data)
         resp.status = falcon.HTTP_200
         print(">>GetRfidData")
