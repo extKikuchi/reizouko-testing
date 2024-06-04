@@ -45,5 +45,5 @@ app.add_route('/get-lock-status', GetLockStatus())
 
 from wsgiref import simple_server
 server = simple_server.make_server('0.0.0.0', 8000, app)
-server.serve_forever()
 print(">>Start Serving")
+server.serve_forever()
