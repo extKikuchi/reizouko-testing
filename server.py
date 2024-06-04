@@ -2,7 +2,7 @@ import falcon
 import json
 import requests
 
-ANDROID_API_URL = 'http://192.168.1.105:8080'  # ここにAndroidデバイスのIPアドレスを入力してください
+ANDROID_API_URL = 'http://192.168.1.105:8080'
 
 class GetRfidData:
     def on_post(self, req, resp):
