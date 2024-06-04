@@ -8,8 +8,8 @@ class GetRfidData:
     def on_post(self, req, resp):
         response = requests.post(f'{ANDROID_API_URL}/get-rfid-data')
         print(response)
-        rfid_data = response.json()
-        resp.body = json.dumps(rfid_data)
+        #rfid_data = response.json()
+        #resp.body = json.dumps(rfid_data)
         resp.status = falcon.HTTP_200
         print(">>GetRfidData")
 
@@ -33,8 +33,8 @@ class GetLockStatus:
     def on_post(self, req, resp):
         response = requests.post(f'{ANDROID_API_URL}/is-door-locked')
         print(response)
-        result = response.json()
-        resp.body = json.dumps(result)
+        #result = response.json()
+        #resp.body = json.dumps(result)
         resp.status = falcon.HTTP_200
         print(">>GetLockStatus")
 
